@@ -31,7 +31,7 @@ function measure(e) {
 				this.height > otherSize.height)
 				return Math.max(this.height-otherSize.height, 0)+
 					Math.max(this.width-otherSize.width, 0);
-			if(this.width == otherSize.width ||
+			if(this.width == otherSize.width &&
 				this.height == otherSize.height)
 				return 0;
 			return -Math.max(otherSize.height-this.height, 0)-
@@ -44,18 +44,21 @@ function blowUp(content) {
 	var p = measure(content.parentNode);
 	var size = 72;
 	var low = 10;
-	var high = 1340;
-	while(low < high) {
+	var high = 504;
+	while(low < high-0.01) {
 		content.style.fontSize = size+"pt";
 		var diff = measure(content).compare(p);
-		if(diff > -64 && diff <= 0)
+		if(diff > -64 && diff <= 0) {
+			low = size;
 			break;
+		}
 		if(diff < 0)
 			low = size;
 		if(diff > 0)
 			high = size;
 		size = (low+high)*0.5;
 	}
+	content.style.fontSize = low+"pt";
 }
 
 text.addEventListener("input", event => {
