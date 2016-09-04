@@ -1,0 +1,15 @@
+{
+  "short_name": "Sign",
+  "name": "Sign Maker",
+  "icons": [
+    {
+      "src": "launcher-icon.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/sign/",
+  "display": "standalone",
+  "orientation": "landscape"
+}
+

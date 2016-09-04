@@ -1,0 +1,31 @@
+body {
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+#sign {
+	width: 100vw;
+	height: 100vh;
+	text-align: center;
+	background: royalblue;
+	color: white;
+	line-height: 100vh;
+}
+
+#signContent {
+	display: inline-block;
+	line-height: 110%;
+	vertical-align: middle;
+}
+
+#text {
+	width: 90vw;
+	font-size: 14pt;
+}
+
+.buttonPanel, .textPanel {
+	width: 90vw;
+	text-align: center;
+	margin: 6pt auto;
+}
+
