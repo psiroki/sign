@@ -9,6 +9,7 @@ self.addEventListener("install", e => {
 				"./index.html?homescreen=1",
 				"./main.js",
 				"./launch-icon.png",
+				"./launch-icon-512.png",
 				"./mainfest.json",
 				"./sign.css"
 			])
